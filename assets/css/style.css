@@ -1,0 +1,460 @@
+root {
+  --primary: #3f979b;
+  --bg: #8bf5fa;
+  --secondary: #205e61;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #8bf5fa;
+  color: #205e61;
+}
+
+/* Navbar */
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.4rem 7%;
+  background-color: rgb(225, 219, 223, 0.8);
+  border-bottom: 1px solid #3f979b;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+}
+
+.navbar-container .navbar .navbar-logo {
+  font-style: italic;
+  font-size: 2rem;
+  font-weight: 700;
+  color: rgb(168, 131, 131);
+}
+
+.navbar-container .navbar .navbar-logo span {
+  color: #205e61;
+}
+
+.navbar-container .navbar .navbar-nav a {
+  padding: 0.2rem;
+  margin-block-start: 1rem;
+  color: #205e61;
+  display: inline-block;
+  font-size: 1.3rem;
+  margin: 0 1rem;
+}
+
+.navbar-container .navbar .navbar-nav a::after {
+  content: "";
+  display: block;
+  padding-bottom: 0.5rem;
+  border-bottom: 0.1rem solid #fff;
+  transform: scaleX(0);
+  transition: 0.2s linear;
+}
+
+.navbar-container .navbar .navbar-nav a:hover::after {
+  transform: scaleX(0.5);
+}
+
+.navbar-container .navbar .navbar-extra a {
+  color: #205e61;
+  margin: 0 0.5rem;
+}
+
+.navbar-container .navbar .navbar-extra a:hover {
+  color: white;
+}
+
+#hamburger-menu {
+  display: none;
+}
+/* Navbar End */
+
+/* Landing Section Start */
+
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background-image: url("../img/header5-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.hero::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 30%;
+  bottom: 0;
+  background: linear-gradient(
+    0deg,
+    rgb(139, 245, 250, 0.99) 8%,
+    rgb(255, 255, 255, 0) 50%
+  );
+}
+
+.hero .content {
+  padding: 1.4rem 7%;
+  max-width: 55rem;
+  display: flex;
+}
+
+.hero .content .content-description h1 {
+  font-style: italic;
+  font-size: 4em;
+  text-shadow: 1px 1px 3px rgba(168, 131, 131, 0.5);
+  color: rgb(168, 131, 131);
+  line-height: 1.2;
+}
+
+.content .content-description h1 span {
+  color: #205e61;
+}
+
+.content .content-description p {
+  font-size: 1.6rem;
+  margin-top: 1rem;
+  line-height: 1.7rem;
+  font-weight: 300;
+  color: white;
+  text-shadow: 1px 1px 3px black;
+}
+
+.hero .content .content-description .cta {
+  padding: 0.8rem 2.5rem;
+  margin-block-start: 1rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 1rem;
+  font-family: "Quicksand", sans-serif;
+  color: white;
+
+  border: 3px solid transparent;
+  border-radius: 999px;
+  background-color: #205e61;
+  cursor: pointer;
+  transition: all 0.15s ease-in;
+}
+/* Landing Section End */
+
+/* About Section Start */
+
+.about,
+.menu,
+.contact,
+aside {
+  padding: 10rem 7% 1.4rem;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+}
+
+.about h2 {
+  text-align: center;
+  font-size: 2.6rem;
+  margin-bottom: 3rem;
+}
+
+.about h2 span {
+  color: #3f979b;
+}
+
+.about .row {
+  display: flex;
+}
+
+.about .row .about-img {
+  flex: 1 1 45rem;
+}
+
+.about .row .about-img img {
+  width: 100%;
+}
+
+.about .row article .content-about {
+  flex: 1 1 35rem;
+  padding: 0 1rem;
+}
+
+.about .row article .content-about h3 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.about .row article .content-about p {
+  font-size: 1.4rem;
+  margin-bottom: 0.8rem;
+  font-weight: 300;
+  line-height: 1.6;
+}
+/* About Section End */
+
+/* Menu Section Start */
+.menu {
+  padding: 10rem 7% 1.4rem;
+}
+
+.menu article h2 {
+  text-align: center;
+  font-size: 2.6rem;
+  margin-bottom: 0.5rem;
+}
+
+.menu article h2 span {
+  color: #3f979b;
+}
+
+.menu article p {
+  font-size: 1.4rem;
+  text-align: center;
+  max-width: 30rem;
+  margin: auto;
+  line-height: 1.6;
+}
+
+.menu .row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 5rem;
+  justify-content: center;
+}
+
+.menu .row .menu-card {
+  text-align: center;
+  padding-bottom: 2rem;
+}
+
+.menu .row .menu-card img {
+  border-radius: 50%;
+  width: 80%;
+}
+
+.menu .row .menu-card .menu-card-title {
+  margin: 01rem auto 0.5rem;
+}
+
+/* Menu Section End */
+
+/* Kontak Section */
+.contact {
+  padding: 10rem 7% 1.4rem;
+}
+
+.contact article h2 {
+  text-align: center;
+  font-size: 2.6rem;
+  margin-bottom: 0.5rem;
+}
+
+.contact article h2 span {
+  color: #3f979b;
+}
+
+.contact article p {
+  text-align: center;
+  max-width: 30rem;
+  margin: auto;
+  line-height: 1.6;
+}
+
+.contact .row {
+  display: flex;
+  margin-top: 2rem;
+  border-color: #222;
+}
+
+.contact .row .map {
+  flex: 1 1 45rem;
+  width: 100%;
+  object-fit: cover;
+}
+
+.contact .row form {
+  flex: 1 1 45rem;
+  padding: 5rem 2rem;
+  text-align: center;
+}
+
+.contact .row form .input-group {
+  display: flex;
+  align-items: center;
+  margin-top: 2rem;
+  border-color: #2c5d5f;
+  border: 1px solid #205e61;
+  padding-left: 2;
+}
+
+.contact .row form .input-group input {
+  width: 100%;
+  padding: 2rem;
+  font-size: 1.7rem;
+  background: none;
+}
+
+.contact .row form .btn {
+  padding: 0.8rem 2.5rem;
+  margin-block-start: 1rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 2rem;
+  font-family: "Quicksand", sans-serif;
+  color: white;
+
+  border: 9px solid transparent;
+  border-radius: 999px;
+  background-color: #205e61;
+  cursor: pointer;
+  transition: all 0.15s ease-in;
+}
+/* Contact Section End */
+
+/* Profil Section Start */
+
+aside {
+  padding: 10rem 7% 1.4rem;
+}
+
+aside article h2 {
+  text-align: center;
+  font-size: 2.6rem;
+  margin-bottom: 0.5rem;
+}
+
+aside article .image {
+  flex: 1 1 45rem;
+  width: 100%;
+  text-align: center;
+}
+
+aside article .image img {
+  width: 200px;
+  height: 300px;
+  border-radius: 15%;
+}
+
+aside .profil table {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Profil Section End */
+
+/* Footer Section */
+footer {
+  padding: 0.8rem 2.5rem;
+  margin-block-start: 1rem;
+  font-weight: 700;
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  background-color: #205e61;
+}
+
+/* Media Queris */
+
+/* Laptop */
+@media (max-width: 1366px) {
+  html {
+    font-size: 75%;
+  }
+}
+/* Tablet */
+@media (max-width: 768px) {
+  html {
+    font-size: 62, 5%;
+  }
+
+  #hamburger-menu {
+    display: inline-block;
+  }
+
+  .navbar-container .navbar .navbar-nav {
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    background-color: #3f979b;
+    width: 30rem;
+    height: 100vh;
+    transition: 0.3s;
+  }
+
+  .navbar-container .navbar .navbar-nav.active {
+    right: 0;
+  }
+
+  .navbar-container .navbar .navbar-nav a {
+    display: block;
+    margin: 1.5rem;
+    padding: 0.5rem;
+    font-size: 2rem;
+  }
+
+  .navbar-container .navbar .navbar-nav a::after {
+    transform-origin: 0 0;
+  }
+  .navbar-container .navbar .navbar-nav a:hover::after {
+    transform: scaleX(0.3);
+  }
+
+  .about .row {
+    flex-wrap: wrap;
+  }
+  .about .row article .content-about {
+    padding: 0rem;
+  }
+
+  .about .row article .content-about h3 {
+    margin-top: 1rem;
+    font-size: 2rem;
+  }
+
+  .about .row article .content-about p {
+    font-size: 1.6rem;
+  }
+  .menu article p {
+    font-size: 2rem;
+  }
+
+  .contact .row {
+    flex-wrap: wrap;
+  }
+
+  .contact .row .map {
+    height: 30rem;
+  }
+
+  .contact .row form {
+    padding-top: 0;
+  }
+
+  footer {
+    font-size: 1rem;
+  }
+}
+
+/* Handphone */
+@media (max-width: 450px) {
+  html {
+    font-size: 55%;
+  }
+}
